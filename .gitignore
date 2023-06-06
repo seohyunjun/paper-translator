@@ -1,0 +1,9 @@
+# markdown-pdf folder
+pdf-markdown
+
+# cache folder
+__pycache__
+.__pycache__
+
+# test file
+test.py

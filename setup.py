@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='paper-translator',
-    version='0.1.0',
+    version='0.1.1',
     description='Tranlsate paper into Korean',
     author='seohyunjun',
     author_email='bnmy6581@gmail.com',

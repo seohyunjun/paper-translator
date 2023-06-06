@@ -27,7 +27,7 @@ def load_paper(config):
     
     config.paper = load_paper 
     print(f"page number: {len(load_paper)}")
-    return load_paper
+    #return load_paper
 
 def splitter(config):
     """Split text into sentences"""
@@ -50,16 +50,36 @@ def splitter(config):
 def translate(config):
     ## LLM
     llm = ChatOpenAI(max_tokens=config.max_tokens, model='gpt-3.5-turbo')
-    
+    #llm = ChatOpenAI()
     chain = load_summarize_chain(llm, chain_type="stuff", verbose=config.verbose)
+    
     # chain.llm_chain.prompt.template = '''following this guide.\nsummaries of sentence.\nYou must use Markdown format.\ntranslate into korean.\n
     # ----------------\n
     # {text}\n
-    # korean:'''
-    chain.llm_chain.prompt.template = """summaries sentence. you must answer in Korean and in Markdown format\n
-    --------------------\n
-    {text}\n
-    answer:"""
+    # # korean:'''
+    # chain.llm_chain.prompt.template = """summaries sentence with Output Markdown format translate into Korean\n
+    # --------------------\n
+    # {text}\n
+    # Output:"""
+    
+    chain.llm_chain.prompt.template = """your task is translate text arxiv paper into Korean with Markdown format.\n
+    ```\n
+    Input: {text}\n
+    Output: ## Title""" # [5]
+    
+    # chain.llm_chain.prompt.template = """
+    # Your task is translate text arxiv paper.\n
+    # arxiv paper text below, delimited by triple backticks.\n
+    # you Must translate into Korean output with Markdown format.\n
+    # arxiv paper: ```{text}```\n
+    # output: ## Title\n
+    # """ # [8]
+    
+    
+    # chain.llm_chain.prompt.template = """summaries sentence. you must answer in Korean and in Markdown format\n
+    # --------------------\n
+    # {text}\n
+    # answer:"""
     
     completion_tokens = 0
     prompt_tokens = 0
@@ -85,6 +105,9 @@ def translate(config):
     print(f"total_cost: {total_cost}\n")
     print(f"total_tokens: {total_tokens}\n")
     
+    for result in results:
+        print(result)
+    
     if config.outputfile:
         with open(config.outputfile, 'w') as f: 
             for result in results:
@@ -93,10 +116,10 @@ def translate(config):
             for ref in config.reference:
                 f.writelines(ref.page_content)
             
-            f.writelines('\n## Cost\n')
+            f.writelines('\n# Cost\n')
             f.writelines(f"\n- completion_tokens: {completion_tokens}\n")
             f.writelines(f"- prompt_tokens: {prompt_tokens}\n")
-            f.writelines(f"- total_cost: {total_cost}\n")
+            f.writelines(f"- total_cost: {total_cost}$\n")
             f.writelines(f"- total_tokens: {total_tokens}\n")
     print("Done!")
-    
+

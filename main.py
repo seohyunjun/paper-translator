@@ -4,10 +4,10 @@ from utils import *
 def main(config):
     
     ## Paper Loader
-    paper = load_paper(config)
+    load_paper(config)
 
     ## Splitter
-    doc = splitter(config)
+    splitter(config)
     
     translate(config)
     ################################################
@@ -22,4 +22,3 @@ if __name__=='__main__':
     args.add_argument('--outputfile', type=str)
     config = args.parse_args()                  
     main(config)
-
