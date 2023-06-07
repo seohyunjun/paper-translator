@@ -53,33 +53,10 @@ def translate(config):
     #llm = ChatOpenAI()
     chain = load_summarize_chain(llm, chain_type="stuff", verbose=config.verbose)
     
-    # chain.llm_chain.prompt.template = '''following this guide.\nsummaries of sentence.\nYou must use Markdown format.\ntranslate into korean.\n
-    # ----------------\n
-    # {text}\n
-    # # korean:'''
-    # chain.llm_chain.prompt.template = """summaries sentence with Output Markdown format translate into Korean\n
-    # --------------------\n
-    # {text}\n
-    # Output:"""
-    
     chain.llm_chain.prompt.template = """your task is translate text arxiv paper into Korean with Markdown format.\n
     ```\n
     Input: {text}\n
     Output: ## Title""" # [5]
-    
-    # chain.llm_chain.prompt.template = """
-    # Your task is translate text arxiv paper.\n
-    # arxiv paper text below, delimited by triple backticks.\n
-    # you Must translate into Korean output with Markdown format.\n
-    # arxiv paper: ```{text}```\n
-    # output: ## Title\n
-    # """ # [8]
-    
-    
-    # chain.llm_chain.prompt.template = """summaries sentence. you must answer in Korean and in Markdown format\n
-    # --------------------\n
-    # {text}\n
-    # answer:"""
     
     completion_tokens = 0
     prompt_tokens = 0
