@@ -5,7 +5,13 @@
 2. It automatically translates addresses or files in the form of PDF files.
 
 
+
 ### version history
+#### v0.1.3 2023/6/23
+- URL -> markdown
+  - require `brew install libmagic`
+
+
 #### v0.1.2 2023/6/15  
 - ChatGPT API Update : gpt-3.5-turbo-16k 
   - token 4k -> 16k (about 3 pages cover per 1 request)
