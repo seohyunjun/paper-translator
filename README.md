@@ -7,6 +7,10 @@
 
 
 ### version history
+
+#### v0.1.4 2023/7/9
+- use langchain schema 
+
 #### v0.1.3 2023/6/23
 - URL -> markdown
   - require `brew install libmagic`
