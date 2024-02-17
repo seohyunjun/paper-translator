@@ -1,0 +1,20 @@
+# markdown-pdf folder
+pdf-markdown
+
+#chromadb
+chroma_db
+
+# cache folder
+__pycache__
+.__pycache__
+*.sh
+
+# test file
+test.py
+*.md
+*.pdf
+
+git_*
+
+# environment file
+.env
