@@ -1,0 +1,9 @@
+langchain
+openai
+arxiv
+pymupdf
+pytube
+youtube-transcript-api
+pinecone-client
+llama-index
+langchain-google-genai
