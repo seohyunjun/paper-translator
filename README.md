@@ -8,6 +8,9 @@
 
 ### version history
 
+#### v0.1.8 2024/02/13
+- Add ChromaDB 
+
 #### v0.1.7 2023/12/16
 - Vectorstore using pinecone 
 

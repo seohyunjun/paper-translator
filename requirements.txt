@@ -7,3 +7,7 @@ youtube-transcript-api
 pinecone-client
 llama-index
 langchain-google-genai
+unstructured
+unstructured[pdf]
+langchain-community
+Ipython
