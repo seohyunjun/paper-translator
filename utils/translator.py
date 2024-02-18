@@ -76,6 +76,9 @@ def translate(config):
             prompt_tokens += cb.prompt_tokens
             total_cost += cb.total_cost
             total_tokens += cb.total_tokens
+            
+            # Align markdown title
+            result = result.replace(".###", ".\n###")
             results.append(result.content)
             
     print(f"completion_tokens: {completion_tokens}\n")
