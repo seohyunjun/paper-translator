@@ -1,4 +1,4 @@
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fseohyunjun%2Fpaper-translator&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)            
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fseohyunjun%2Fpaper-translator&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)         
 
 # paper-translator
 1. This is a paper translator(`korean`) using Langchain.  
@@ -69,4 +69,19 @@ python -m pip install -r ./requirements.txt
 ```commandline
 python main.py --pdf https://arxiv.org/pdf/2304.06035v1.pdf --verbose 1 --outputfile ChooseYourWeapon.md
 ```
+
+---
+
+<a href="mailto:bnmy6581@gmail.com">
+    <img src="https://img.shields.io/badge/
+    Gmail-EA4335?style=for-the-badge&logo=Gmail&logoColor=white"> 
+</a>
+<a href="https://pf.kakao.com/_vxhjyxj">
+    <img src="https://img.shields.io/badge/
+    KakaoBot-FFCD00?style=for-the-badge&logoColor=black&logo=KakaoTalk"> 
+</a>
+<p>
+<a href="https://pf.kakao.com/_vxhjyxj">
+<img src='./src/kakaobot.png' width=200 align='left'/>
+</p>
 
