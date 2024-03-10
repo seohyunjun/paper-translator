@@ -8,6 +8,11 @@
 
 ### version history
 
+#### v0.1.9 2024/03/10
+- select embedding model
+  - text-embedding-3-small
+  - text-embedding-3-large  
+
 #### v0.1.8 2024/02/13
 - Add ChromaDB 
 
