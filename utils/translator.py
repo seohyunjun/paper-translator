@@ -1,6 +1,7 @@
 # openai api
 import openai
 
+import time
 # langchain module
 from langchain_community.chat_models import ChatOpenAI
 
@@ -70,17 +71,21 @@ def translate(config):
     for page in tqdm(config.document, total=len(config.document)):
         
         with get_openai_callback() as cb:
-            result = llm([SystemMessage(content=system), HumanMessage(content=page.page_content)])
+            result = llm.invoke([SystemMessage(content=system), HumanMessage(content=page.page_content)])
+            
             print(result.content)
 
+            completion_tokens += cb.completion_tokens
             prompt_tokens += cb.prompt_tokens
             total_cost += cb.total_cost
             total_tokens += cb.total_tokens
-            
-            # Align markdown title
-            result = result.replace(".###", ".\n###")
-            results.append(result.content)
-            
+            if "gemini" in config.model:
+                time.sleep(1)
+                
+        # Align markdown title
+        result_context = result.content.replace(".###", ".\n###")
+        results.append(result_context)
+        
     print(f"completion_tokens: {completion_tokens}\n")
     print(f"prompt_tokens: {prompt_tokens}\n")
     print(f"total_cost: {total_cost}\n")
