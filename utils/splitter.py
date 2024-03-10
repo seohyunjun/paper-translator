@@ -53,10 +53,10 @@ def splitter(config):
         # embedding document and upload to pinecone
 
         # emebdding document
-        pinecone_embed(index_name=config.title, docs=config.document)
+        pinecone_embed(index_name=config.title, model=config.embedding_model, docs=config.document)
     if config.chromadb:
         # embedding document and upload to pinecone
 
         # emebdding document
-        chromadb_embed(collection_name=config.title, docs=config.document)
+        chromadb_embed(collection_name=config.title, docs=config.document, model=config.embedding_model, embed_batch_size=100)
         

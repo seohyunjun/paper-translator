@@ -32,7 +32,7 @@ def preprocess_doc(document):
         ))
     return docs
     
-def chromadb_embed(collection_name: str, docs: list, model: str='text-embedding-ada-002', embed_batch_size: int=100):
+def chromadb_embed(collection_name: str, docs: list, model: str='text-embedding-3-small', embed_batch_size: int=100):
     # # create the index if it does not exist already
     # collection = createOrget_collection(collection_name)
     
@@ -43,7 +43,6 @@ def chromadb_embed(collection_name: str, docs: list, model: str='text-embedding-
     # storage_context = StorageContext.from_defaults(
     #     vector_store=vector_store
     # )
-    
     # load vector db
     collection = chroma_client.get_or_create_collection(collection_name)
     
@@ -53,7 +52,6 @@ def chromadb_embed(collection_name: str, docs: list, model: str='text-embedding-
     embed_model = OpenAIEmbedding(model=model, embed_batch_size=embed_batch_size)
 
     service_context = ServiceContext.from_defaults(embed_model=embed_model)
-    
     
     index = GPTVectorStoreIndex.from_documents(
         preprocess_doc(docs), storage_context=storage_context,
