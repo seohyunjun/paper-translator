@@ -8,6 +8,11 @@
 
 ### version history
 
+#### v0.1.9 2024/03/10
+- select embedding model
+  - text-embedding-3-small
+  - text-embedding-3-large  
+
 #### v0.1.8 2024/02/13
 - Add ChromaDB 
 
@@ -71,6 +76,7 @@ python main.py --pdf https://arxiv.org/pdf/2304.06035v1.pdf --verbose 1 --output
 ```
 
 ---
+<<<<<<< HEAD
 
 <a href="mailto:bnmy6581@gmail.com">
     <img src="https://img.shields.io/badge/
@@ -81,6 +87,18 @@ python main.py --pdf https://arxiv.org/pdf/2304.06035v1.pdf --verbose 1 --output
     KakaoBot-FFCD00?style=for-the-badge&logoColor=black&logo=KakaoTalk"> 
 </a>
 <p>
+=======
+<br>
+
+<p>
+<a href="mailto:bnmy6581@gmail.com">
+<img src="https://img.shields.io/badge/Gmail-EA4335? style=for-the-badge&logo=Gmail logoColor=white"> 
+</a>
+<a href="https://pf.kakao.com/_vxhjyxj">
+<img src="https://img.shields.io/badge/KakaoBot-FFCD00? style=for-the-badge&logoColor=black&logo=KakaoTalk"> 
+</a>
+
+>>>>>>> 09018da8f5ee40b1701a732e408c8af4600debe8
 <a href="https://pf.kakao.com/_vxhjyxj">
 <img src='./src/kakaobot.png' width=200 align='left'/>
 </p>
