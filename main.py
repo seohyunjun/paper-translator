@@ -25,11 +25,11 @@ if __name__ == "__main__":
     args.add_argument("--chunk_size", type=int, default=5000)
     args.add_argument("--outputfile", type=str, default='test.md')
     args.add_argument("--model", type=str, default="gpt-3.5-turbo-16k")
-    args.add_argument("--title", type=str, default="title")
+    args.add_argument("--embedding_model", type=str, default="text-embedding-3-small")
+    args.add_argument("--title", type=str)
     # pinecone args
     args.add_argument("--pinecone", type=bool, default=False)
     args.add_argument("--chromadb", type=bool, default=True)
-    args.add_argument("--index_name", type=str, default="knowledge")
     config = args.parse_args()
 
     main(config)
