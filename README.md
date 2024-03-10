@@ -75,15 +75,17 @@ python -m pip install -r ./requirements.txt
 python main.py --pdf https://arxiv.org/pdf/2304.06035v1.pdf --verbose 1 --outputfile ChooseYourWeapon.md
 ```
 
+---
+<br>
+
+<p>
 <a href="mailto:bnmy6581@gmail.com">
-    <img src="https://img.shields.io/badge/
-    Gmail-EA4335?style=for-the-badge&logo=Gmail&logoColor=white"> 
+<img src="https://img.shields.io/badge/Gmail-EA4335? style=for-the-badge&logo=Gmail logoColor=white"> 
 </a>
 <a href="https://pf.kakao.com/_vxhjyxj">
-    <img src="https://img.shields.io/badge/
-    KakaoBot-FFCD00?style=for-the-badge&logoColor=black&logo=KakaoTalk"> 
+<img src="https://img.shields.io/badge/KakaoBot-FFCD00? style=for-the-badge&logoColor=black&logo=KakaoTalk"> 
 </a>
-<p>
+
 <a href="https://pf.kakao.com/_vxhjyxj">
 <img src='./src/kakaobot.png' width=200 align='left'/>
 </p>
